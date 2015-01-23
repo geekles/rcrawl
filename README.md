@@ -1,6 +1,8 @@
 # Rcrawl web crawler for Ruby
 Rcrawl is a web crawler written entirely in ruby.  It's limited right now by the fact that it will stay on the original domain provided.
 
+Rcrawl is available as a gem here: https://rubygems.org/gems/rcrawl/versions/0.5.1
+
 Rcrawl uses a modular approach to processing the HTML it receives.  The link exraction portion of Rcrawl depends on the scrAPI toolkit by Assaf Arkin (http://labnotes.org).
 	gem install scrapi
 
