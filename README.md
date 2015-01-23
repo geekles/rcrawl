@@ -1,4 +1,4 @@
-= Rcrawl web crawler for Ruby
+# Rcrawl web crawler for Ruby
 Rcrawl is a web crawler written entirely in ruby.  It's limited right now by the fact that it will stay on the original domain provided.
 
 Rcrawl uses a modular approach to processing the HTML it receives.  The link exraction portion of Rcrawl depends on the scrAPI toolkit by Assaf Arkin (http://labnotes.org).
@@ -6,7 +6,7 @@ Rcrawl uses a modular approach to processing the HTML it receives.  The link exr
 
 The structure of the crawling process was inspired by the specs of the Mercator crawler (http://www.cindoc.csic.es/cybermetrics/pdf/68.pdf).  A (somewhat) brief overview of the design philosophy follows.
 
-== The Rcrawl process
+## The Rcrawl process
 1. Remove an absolute URL from the URL Server.
 2. Download corresponding document from the internet, grabbing and processing robots.txt first, if available.
 3. Feed the document into a rewind input stream(ris) to be read/re-read as needed.  Based on MIME type, invoke the process method of the
@@ -15,38 +15,37 @@ The structure of the crawling process was inspired by the specs of the Mercator 
 6. Has the URL been seen before?  Namely, is it in the URL Server or has it been downloaded already?  If the URL is new, it is added to the URL Server.
 7. Back to step 1, repeat until the URL Server is empty.
 
-== Examples
+## Examples
 
-# Instantiate a new Rcrawl object
-	crawler = Rcrawl::Crawler.new(url)
-
-
-# Begin the crawl process
-	crawler.crawl
-
-== After the crawler is done crawling
-
-# Returns an array of visited links
-	crawler.visited_links
+### Instantiate a new Rcrawl object
+	`crawler = Rcrawl::Crawler.new(url)`
 
 
-# Returns a hash where the key is a url and the value is
-# the raw html from that url
-	crawler.raw_html
+### Begin the crawl process
+	`crawler.crawl`
+
+## After the crawler is done crawling
+
+### Returns an array of visited links
+	`crawler.visited_links`
 
 
-# Returns a hash where the key is a URL and the value is
-# the error message from stderr
-	crawler.errors
+### Returns a hash where the key is a url and the value is the raw html from that url
+	`crawler.raw_html`
 
 
-# Returns an array of external links
-	crawler.external_links
+### Returns a hash where the key is a URL and the value is
+### the error message from stderr
+	`crawler.errors`
 
-# Set user agent
-	crawler.user_agent = "Your fancy crawler name here"
-	
-== License
+
+### Returns an array of external links
+	`crawler.external_links`
+
+### Set user agent
+	`crawler.user_agent = "Your fancy crawler name here"`
+
+## License
 Copyright © 2006 Digital Duckies, LLC, under MIT License
 
 Developed for http://digitalduckies.net
