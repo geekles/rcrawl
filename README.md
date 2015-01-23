@@ -50,6 +50,6 @@ The structure of the crawling process was inspired by the specs of the Mercator 
 ## License
 Copyright © 2006 Digital Duckies, LLC, under MIT License
 
-Developed for http://digitalduckies.net
+Developed for http://digitalduckies.net by [@geekles](https://github.com/geekles) and [@jasbur](https://github.com/jasbur)
 
 News, code, and documentation at http://blog.digitalduckies.net
